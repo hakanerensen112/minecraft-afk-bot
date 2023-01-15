@@ -2,7 +2,7 @@ const mineflayer = require('mineflayer');
 const Movements = require('mineflayer-pathfinder').Movements;
 const pathfinder = require('mineflayer-pathfinder').pathfinder;
 const { GoalBlock, GoalXZ } = require('mineflayer-pathfinder').goals;
-const { mineflayer: mineflayerViewer } = require('prismarine-viewer')
+//const { mineflayer: mineflayerViewer } = require('prismarine-viewer')
 const config = require('./settings.json');
 
 const loggers = require('./logging.js');
@@ -25,7 +25,7 @@ function createBot() {
    bot.pathfinder.setMovements(defaultMove);
 
    bot.once('spawn', () => {
-     mineflayerViewer(bot, { port: 3007, firstPerson: true }) // port is the
+   //  mineflayerViewer(bot, { port: 3007, firstPerson: true }) // port is the
       logger.info("Bot joined to the server");
 
       if (config.utils['auto-auth'].enabled) {
